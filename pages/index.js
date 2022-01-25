@@ -1,5 +1,5 @@
 import { Box, Button, Text, TextField, Image } from "@skynexui/components";
-import { useState } from "react/cjs/react.development";
+import React, { useState } from 'react';
 import appConfig from "../config.json";
 import {useRouter} from "next/router";
 
@@ -36,7 +36,7 @@ function Titulo(props) {
 
 export default function PaginaInicial() {
   // const username = 'peas';
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState();
   const route=useRouter();
   return (
     <>
