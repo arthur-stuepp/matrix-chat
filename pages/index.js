@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import appConfig from "../config.json";
 import {useRouter} from "next/router";
 
-
-
 function Titulo(props) {
   const Tag = props.tag || "h1";
   return (
@@ -20,19 +18,6 @@ function Titulo(props) {
     </>
   );
 }
-
-// Componente React
-// function HomePage() {
-//     // JSX
-//     return (
-//         <div>
-//             <GlobalStyle />
-//             <Titulo tag="h2">Boas vindas de volta!</Titulo>
-//             <h2>Discord - Alura Matrix</h2>
-//         </div>
-//     )
-// }
-// export default HomePage
 
 export default function PaginaInicial() {
   // const username = 'peas';
@@ -76,7 +61,7 @@ export default function PaginaInicial() {
             as="form"
             onSubmit={function (e) {
               e.preventDefault();
-              route.push('/chat');
+              route.push(`/chat?username=${username}`);
             }}
             styleSheet={{
               display: "flex",
